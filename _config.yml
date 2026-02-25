@@ -16,7 +16,7 @@ timezone:
 
 title: 墨殇博客 # the main title
 
-tagline: “ 青衫烟雨客，似是故人归 ” # it will display as the subtitle
+tagline: “ 青衫烟雨客，似是故人归。 ” # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   A minimal, responsive and feature-rich Jekyll theme for technical writing.
