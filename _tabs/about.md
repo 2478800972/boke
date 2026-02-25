@@ -1,8 +1,10 @@
 ---
-# the default layout is 'page'
-icon: fas fa-info-circle
-order: 4
+title: 关于我
+permalink: /about/
 ---
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
-{: .prompt-tip }
+![派蒙]({{ site.baseurl }}/assets/img/paimon.png)
+
+嗨旅行者，恭喜你发现了一个宝藏的博客，本站采用 Jekyll 主题 Chirpy，是个人博客(˵¯͒〰¯͒˵)
+
+欢迎你的来访！
