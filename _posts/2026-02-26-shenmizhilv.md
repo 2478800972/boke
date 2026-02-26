@@ -17,7 +17,7 @@ mermaid: true             # 启用流程图（需要时设为 true）
 **滚开早期巅峰之作《神秘之旅》，带你领略什么叫“一力降十会”的原始震撼。
 
 
-<img src="https://bkimg.cdn.bcebos.com/pic/c8177f3e6709c93d70cf2535186eefdcd100bba1feec" alt="神秘之旅" width="500" style="border-radius: 20px;">
+<img src="https://img1.baidu.com/it/u=1189006061,3431087445&fm=253&fmt=auto&app=138&f=PNG?w=681&h=454" alt="神秘之旅" width="500" style="border-radius: 20px;">
 
 
 
