@@ -19,7 +19,7 @@ mermaid: true             # 启用流程图（需要时设为 true）
 **滚开成名之作《巫师世界》，带你领略什么叫“为力量舍弃一切”的黑暗美学。** 
 
 
-<img src="https://img2.baidu.com/it/u=2081841887,3457692782&fm=253&app=138&f=JPEG?w=800&h=1081" alt="巫师世界" width="250" style="border-radius: 20px;">
+<img src="http://img2.baidu.com/it/u=2081841887,3457692782&fm=253&app=138&f=JPEG?w=800&h=1081" alt="巫师世界" width="250" style="border-radius: 20px;">
 
 
 ## 📚 基本信息
