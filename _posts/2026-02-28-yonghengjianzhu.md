@@ -18,7 +18,7 @@ mermaid: true             # 启用流程图（需要时设为 true）
 **滚开继《神秘之旅》后的又一力作，属性加点流的黑暗美学巅峰。** 
 
 
-<img src="https://i1.hdslb.com/bfs/archive/b94515725aec3cbf3f53ea0b991dc1895742378e.jpg" alt="永恒剑主" width="500" style="border-radius: 20px;">
+<img src="https://img1.baidu.com/it/u=3415546631,2219066562&fm=253&fmt=auto&app=120&f=JPEG?w=810&h=456" alt="永恒剑主" width="500" style="border-radius: 20px;">
 
 
 ## 📚 基本信息
