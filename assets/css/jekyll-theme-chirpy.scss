@@ -9,26 +9,3 @@
 ';
 
 /* append your custom style below */
-
-/* ==============================================
-   仅修改侧边栏+选中项背景色，不影响主页其他样式
-   直接选中元素强制修改，100%生效，兼容所有Chirpy版本
-   ============================================== */
-
-/* 【浅色模式】样式 */
-/* 1. 侧边栏整体背景色 */
-html .sidebar {
-  background-color: #ffffff !important;
-}
-
-/* 2. 你框选的「当前选中菜单项」的背景+文字颜色 */
-html .sidebar .nav-item.active {
-  background-color: #F8F8F8 !important; /* 选中项背景色，直接改这里的色值 */
-  color: #333333 !important; /* 选中项文字颜色，和背景形成清晰对比 */
-}
-
-/* 可选：鼠标悬浮在菜单项上的背景色，和选中风格统一 */
-html .sidebar .nav-item:hover {
-  background-color: #F8F8F8 !important;
-}
-
