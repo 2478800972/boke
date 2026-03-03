@@ -13,10 +13,41 @@
 
 // 覆盖浅色模式侧边栏背景
 :root {
-  --sidebar-bg: #faf9f6 !important; /* 换成你喜欢的颜色 */
+  --sidebar-bg: #faf9f6;
 }
 
-// 覆盖深色模式侧边栏背景（如果需要）
+// 覆盖深色模式侧边栏背景（必须放在浅色模式之后）
 [data-theme="dark"] {
-  --sidebar-bg: #121212 !important;
+  --sidebar-bg: #121212;
+}
+
+
+/* 自定义主页背景色 */
+
+/* 浅色模式主页背景 */
+:root {
+  --body-bg: #faf9f6; /* 主页背景色，可改为 #f8f9fa 等浅色系 */
+  --content-bg: #faf9f6; /* 内容卡片背景色 */
+}
+
+/* 深色模式主页背景 */
+[data-theme="dark"] {
+  --body-bg: #121212; /* 主页背景色，可改为 #121212 等深色系 */
+  --content-bg: #1e1e1e; /* 内容卡片背景色，可改为 #252526 等 */
+}
+
+
+
+/* 自定义侧边栏选中项背景色 */
+
+/* 浅色模式下选中项的背景色 */
+:root {
+  --sidebar-active-bg: #faf9f6; /* 示例：浅灰蓝色，可按喜好修改 */
+  --sidebar-active-color: #919191; /* 选中项文字颜色，可同步修改 */
+}
+
+/* 深色模式下选中项的背景色 */
+[data-theme="dark"] {
+  --sidebar-active-bg: #3a3a3a; /* 示例：深灰蓝色，可按喜好修改 */
+  --sidebar-active-color: #f4f4f4; /* 选中项文字颜色，可同步修改 */
 }
