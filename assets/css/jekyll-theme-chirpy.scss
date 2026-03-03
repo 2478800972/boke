@@ -10,59 +10,79 @@
 
 /* append your custom style below */
 
+/* ==============================================
+   【浅色模式】全元素背景统一，和侧边栏完全匹配
+   ============================================== */
+/* 1. 全量变量覆盖，兼容所有Chirpy版本 */
+html:root {
+  /* 侧边栏相关 */
+  --sidebar-bg: #faf9f6 !important;
+  --sidebar-nav-active-bg: #e8e6e0 !important;
+  --sidebar-nav-active-color: #333333 !important;
+  /* 页面背景相关，兼容所有版本变量名 */
+  --body-bg: #faf9f6 !important;
+  --main-bg: #faf9f6 !important;
+  --content-bg: #faf9f6 !important;
+  --card-bg: #faf9f6 !important;
+  --header-bg: #faf9f6 !important;
+}
+
+/* 2. 直接元素强制覆盖，优先级拉满，彻底杜绝主题样式覆盖 */
+html,
+html body {
+  background-color: #faf9f6 !important;
+}
+
+html #header {
+  background-color: #faf9f6 !important;
+  border-bottom: none !important;
+}
+
+html #main-wrapper,
+html .post-list,
+html .post-item,
+html .card,
+html .tags-wrapper,
+html .categories-wrapper {
+  background-color: #faf9f6 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
 
 /* ==============================================
-   Chirpy 主题全局样式强制覆盖
-   双重保险：CSS变量 + 直接元素选择器，彻底覆盖主题默认样式
+   【深色模式】全元素样式统一，适配夜间模式
    ============================================== */
-
-/* 【浅色模式】配色，侧边栏+主页完全统一 */
-html:root {
-  /* 基础变量覆盖 */
-  --sidebar-bg: #faf9f6 !important;          /* 侧边栏背景 */
-  --body-bg: #faf9f6 !important;             /* 页面底层背景 */
-  --content-bg: #faf9f6 !important;          /* 内容卡片背景 */
-  --sidebar-active-bg: #e8e6e0 !important;   /* 侧边栏选中项背景 */
-  --sidebar-active-color: #333333 !important;/* 侧边栏选中项文字 */
-}
-
-/* 强制修改浅色模式主页核心元素的背景色，彻底覆盖主题默认样式 */
-html body {
-  background-color: #faf9f6 !important;       /* 整个页面的底层背景 */
-}
-
-html #main-wrapper {
-  background-color: #faf9f6 !important;       /* 主页主内容容器的背景 */
-}
-
-html .card {
-  background-color: #faf9f6 !important;       /* 文章卡片、标签卡片的背景 */
-  border: none !important;                     /* 可选：去掉卡片边框，风格更统一 */
-  box-shadow: none !important;                 /* 可选：去掉卡片阴影，更简洁干净 */
-}
-
-
-/* 【深色模式】配色，侧边栏+主页同步生效 */
+/* 1. 全量变量覆盖 */
 html[data-theme="dark"] {
-  /* 基础变量覆盖 */
-  --sidebar-bg: #121212 !important;          /* 侧边栏背景 */
-  --body-bg: #121212 !important;             /* 页面底层背景 */
-  --content-bg: #1e1e1e !important;          /* 内容卡片背景 */
-  --sidebar-active-bg: #3a3a3a !important;   /* 侧边栏选中项背景 */
-  --sidebar-active-color: #f4f4f4 !important;/* 侧边栏选中项文字 */
+  --sidebar-bg: #121212 !important;
+  --sidebar-nav-active-bg: #3a3a3a !important;
+  --sidebar-nav-active-color: #f4f4f4 !important;
+  --body-bg: #121212 !important;
+  --main-bg: #121212 !important;
+  --content-bg: #1e1e1e !important;
+  --card-bg: #1e1e1e !important;
+  --header-bg: #121212 !important;
 }
 
-/* 强制修改深色模式主页核心元素的背景色 */
+/* 2. 直接元素强制覆盖 */
+html[data-theme="dark"],
 html[data-theme="dark"] body {
   background-color: #121212 !important;
+}
+
+html[data-theme="dark"] #header {
+  background-color: #121212 !important;
+  border-bottom: 1px solid #2a2a2a !important;
 }
 
 html[data-theme="dark"] #main-wrapper {
   background-color: #121212 !important;
 }
 
-html[data-theme="dark"] .card {
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .post-item {
   background-color: #1e1e1e !important;
   border: none !important;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2) !important; /* 深色模式保留轻微阴影，增加层次感 */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2) !important;
 }
