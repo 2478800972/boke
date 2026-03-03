@@ -11,26 +11,25 @@
 /* append your custom style below */
 
 
-// 【核心】合并所有浅色模式变量，只写一次 :root，确保优先级
-:root {
-  // 侧边栏背景
-  --sidebar-bg: #faf9f6;
-  // 主页/内容区背景（统一成你的米色风格）
-  --body-bg: #faf9f6;
-  --content-bg: #faf9f6;
-  // 侧边栏选中项（关键：背景色与侧边栏区分，文字色加深）
-  --sidebar-active-bg: #e8e6e0; /* 比侧边栏深一点的米色，凸显选中 */
-  --sidebar-active-color: #333333; /* 深灰色文字，更清晰 */
+/* ==============================================
+   Chirpy 主题全局样式强制覆盖
+   作用：自定义明暗双模式配色，html选择器+!important 优先级拉满，不会被主题默认样式覆盖
+   ============================================== */
+
+/* 【浅色模式】配色定义，系统/主题切浅色时自动生效 */
+html:root {
+  --sidebar-bg: #faf9f6 !important;          /* 侧边栏整体的背景颜色 */
+  --body-bg: #faf9f6 !important;             /* 整个网页的底层背景色（页面最外层底色） */
+  --content-bg: #faf9f6 !important;          /* 文章卡片、标签页、分类页等内容区域的背景色 */
+  --sidebar-active-bg: #e8e6e0 !important;   /* 侧边栏当前选中菜单项的背景色（建议和侧边栏底色有区分，凸显选中效果） */
+  --sidebar-active-color: #333333 !important;/* 侧边栏当前选中菜单项的文字颜色 */
 }
 
-// 【核心】合并所有深色模式变量，只写一次，放在浅色之后
-[data-theme="dark"] {
-  // 侧边栏背景
-  --sidebar-bg: #121212;
-  // 主页/内容区背景
-  --body-bg: #121212;
-  --content-bg: #1e1e1e;
-  // 侧边栏选中项（深色对比明显）
-  --sidebar-active-bg: #3a3a3a;
-  --sidebar-active-color: #f4f4f4;
+/* 【深色模式】配色定义，系统/主题切深色时自动生效 */
+html[data-theme="dark"] {
+  --sidebar-bg: #121212 !important;          /* 侧边栏整体的背景颜色 */
+  --body-bg: #121212 !important;             /* 整个网页的底层背景色（页面最外层底色） */
+  --content-bg: #1e1e1e !important;          /* 文章卡片、标签页、分类页等内容区域的背景色（比侧边栏深一点，做出层次感） */
+  --sidebar-active-bg: #3a3a3a !important;   /* 侧边栏当前选中菜单项的背景色 */
+  --sidebar-active-color: #f4f4f4 !important;/* 侧边栏当前选中菜单项的文字颜色 */
 }
