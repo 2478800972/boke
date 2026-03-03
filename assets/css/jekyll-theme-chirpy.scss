@@ -1,0 +1,22 @@
+---
+---
+
+/* prettier-ignore */
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
+
+/* append your custom style below */
+
+
+// 覆盖浅色模式侧边栏背景
+:root {
+  --sidebar-bg: #faf9f6 !important; /* 换成你喜欢的颜色 */
+}
+
+// 覆盖深色模式侧边栏背景（如果需要）
+[data-theme="dark"] {
+  --sidebar-bg: #121212 !important;
+}
