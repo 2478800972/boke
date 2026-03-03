@@ -13,23 +13,56 @@
 
 /* ==============================================
    Chirpy 主题全局样式强制覆盖
-   作用：自定义明暗双模式配色，html选择器+!important 优先级拉满，不会被主题默认样式覆盖
+   双重保险：CSS变量 + 直接元素选择器，彻底覆盖主题默认样式
    ============================================== */
 
-/* 【浅色模式】配色定义，系统/主题切浅色时自动生效 */
+/* 【浅色模式】配色，侧边栏+主页完全统一 */
 html:root {
-  --sidebar-bg: #faf9f6 !important;          /* 侧边栏整体的背景颜色 */
-  --body-bg: #faf9f6 !important;             /* 整个网页的底层背景色（页面最外层底色） */
-  --content-bg: #faf9f6 !important;          /* 文章卡片、标签页、分类页等内容区域的背景色 */
-  --sidebar-active-bg: #e8e6e0 !important;   /* 侧边栏当前选中菜单项的背景色（建议和侧边栏底色有区分，凸显选中效果） */
-  --sidebar-active-color: #333333 !important;/* 侧边栏当前选中菜单项的文字颜色 */
+  /* 基础变量覆盖 */
+  --sidebar-bg: #faf9f6 !important;          /* 侧边栏背景 */
+  --body-bg: #faf9f6 !important;             /* 页面底层背景 */
+  --content-bg: #faf9f6 !important;          /* 内容卡片背景 */
+  --sidebar-active-bg: #e8e6e0 !important;   /* 侧边栏选中项背景 */
+  --sidebar-active-color: #333333 !important;/* 侧边栏选中项文字 */
 }
 
-/* 【深色模式】配色定义，系统/主题切深色时自动生效 */
+/* 强制修改浅色模式主页核心元素的背景色，彻底覆盖主题默认样式 */
+html body {
+  background-color: #faf9f6 !important;       /* 整个页面的底层背景 */
+}
+
+html #main-wrapper {
+  background-color: #faf9f6 !important;       /* 主页主内容容器的背景 */
+}
+
+html .card {
+  background-color: #faf9f6 !important;       /* 文章卡片、标签卡片的背景 */
+  border: none !important;                     /* 可选：去掉卡片边框，风格更统一 */
+  box-shadow: none !important;                 /* 可选：去掉卡片阴影，更简洁干净 */
+}
+
+
+/* 【深色模式】配色，侧边栏+主页同步生效 */
 html[data-theme="dark"] {
-  --sidebar-bg: #121212 !important;          /* 侧边栏整体的背景颜色 */
-  --body-bg: #121212 !important;             /* 整个网页的底层背景色（页面最外层底色） */
-  --content-bg: #1e1e1e !important;          /* 文章卡片、标签页、分类页等内容区域的背景色（比侧边栏深一点，做出层次感） */
-  --sidebar-active-bg: #3a3a3a !important;   /* 侧边栏当前选中菜单项的背景色 */
-  --sidebar-active-color: #f4f4f4 !important;/* 侧边栏当前选中菜单项的文字颜色 */
+  /* 基础变量覆盖 */
+  --sidebar-bg: #121212 !important;          /* 侧边栏背景 */
+  --body-bg: #121212 !important;             /* 页面底层背景 */
+  --content-bg: #1e1e1e !important;          /* 内容卡片背景 */
+  --sidebar-active-bg: #3a3a3a !important;   /* 侧边栏选中项背景 */
+  --sidebar-active-color: #f4f4f4 !important;/* 侧边栏选中项文字 */
+}
+
+/* 强制修改深色模式主页核心元素的背景色 */
+html[data-theme="dark"] body {
+  background-color: #121212 !important;
+}
+
+html[data-theme="dark"] #main-wrapper {
+  background-color: #121212 !important;
+}
+
+html[data-theme="dark"] .card {
+  background-color: #1e1e1e !important;
+  border: none !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2) !important; /* 深色模式保留轻微阴影，增加层次感 */
 }
