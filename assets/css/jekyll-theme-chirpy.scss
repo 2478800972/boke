@@ -10,83 +10,9 @@
 
 /* append your custom style below */
 
-/* ==============================================
-   Chirpy 主题全局样式强制覆盖
-   功能：统一明暗双模式的侧边栏+主页背景，修复选中项样式
-   使用说明：只需要修改#后面的色值，其他代码不要动，即可自定义配色
-   ============================================== */
-
-/* ==============================================
-   【浅色模式】全元素样式统一（和侧边栏米色完全匹配）
-   ============================================== */
-/* 第一层：全量主题变量覆盖，兼容所有Chirpy版本 */
+/* 【浅色模式】仅侧边栏相关样式 */
 html:root {
-  --sidebar-bg: #faf9f6 !important;                /* 侧边栏整体的背景颜色 */
-  --sidebar-nav-active-bg: #e8e6e0 !important;     /* 侧边栏当前选中菜单项的背景色 */
-  --sidebar-nav-active-color: #333333 !important;  /* 侧边栏当前选中菜单项的文字颜色 */
-  --body-bg: #faf9f6 !important;                    /* 网页最底层的全局背景色 */
-  --main-bg: #faf9f6 !important;                    /* 主页主内容区域的背景色 */
-  --content-bg: #faf9f6 !important;                 /* 文章详情页内容区的背景色 */
-  --card-bg: #faf9f6 !important;                    /* 文章卡片、标签卡片的背景色 */
-  --header-bg: #faf9f6 !important;                  /* 顶部导航栏的背景色 */
-}
-
-/* 第二层：直接元素强制覆盖，优先级拉满，彻底杜绝主题默认样式覆盖 */
-html,
-html body {
-  background-color: #faf9f6 !important;             /* 强制修改html+body的全局背景色 */
-}
-
-html #header {
-  background-color: #faf9f6 !important;             /* 强制修改顶部导航栏背景色 */
-  border-bottom: none !important;                    /* 可选：去掉导航栏底部分割线，风格更统一 */
-}
-
-html #main-wrapper,
-html .post-list,
-html .post-item,
-html .card,
-html .tags-wrapper,
-html .categories-wrapper {
-  background-color: #faf9f6 !important;             /* 强制修改主页所有内容容器、卡片的背景色 */
-  border: none !important;                           /* 可选：去掉卡片边框，风格更统一 */
-  box-shadow: none !important;                       /* 可选：去掉卡片阴影，更简洁干净 */
-}
-
-
-/* ==============================================
-   【深色模式】全元素样式统一（适配夜间模式）
-   ============================================== */
-/* 第一层：全量主题变量覆盖 */
-html[data-theme="dark"] {
-  --sidebar-bg: #121212 !important;                /* 侧边栏整体的背景颜色 */
-  --sidebar-nav-active-bg: #3a3a3a !important;     /* 侧边栏当前选中菜单项的背景色 */
-  --sidebar-nav-active-color: #e0e0e0 !important;  /* 侧边栏当前选中菜单项的文字颜色 */
-  --body-bg: #121212 !important;                    /* 网页最底层的全局背景色 */
-  --main-bg: #121212 !important;                    /* 主页主内容区域的背景色 */
-  --content-bg: #1e1e1e !important;                 /* 文章详情页内容区的背景色 */
-  --card-bg: #1e1e1e !important;                    /* 文章卡片、标签卡片的背景色 */
-  --header-bg: #121212 !important;                  /* 顶部导航栏的背景色 */
-}
-
-/* 第二层：直接元素强制覆盖 */
-html[data-theme="dark"],
-html[data-theme="dark"] body {
-  background-color: #121212 !important;             /* 强制修改html+body的全局背景色 */
-}
-
-html[data-theme="dark"] #header {
-  background-color: #121212 !important;             /* 强制修改顶部导航栏背景色 */
-  border-bottom: 1px solid #2a2a2a !important;      /* 深色模式保留分割线，区分导航和内容 */
-}
-
-html[data-theme="dark"] #main-wrapper {
-  background-color: #121212 !important;             /* 强制修改主内容容器背景色 */
-}
-
-html[data-theme="dark"] .card,
-html[data-theme="dark"] .post-item {
-  background-color: #1e1e1e !important;             /* 强制修改文章卡片背景色（比背景深一点，有层次感） */
-  border: none !important;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2) !important;/* 深色模式保留轻微阴影，提升质感 */
+  --sidebar-bg: #ffffff !important;                /* 整个左侧侧边栏的背景色 */
+  --sidebar-nav-active-bg: #e8e6e0 !important;     /* 你框选的「当前选中菜单项」的背景色 */
+  --sidebar-nav-active-color: #F8F8F8 !important;  /* 选中菜单项的文字颜色（和背景形成清晰对比） */
 }
