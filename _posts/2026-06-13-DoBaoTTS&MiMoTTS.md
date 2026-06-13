@@ -122,18 +122,27 @@ DoBaoTTS 是一款适配开源阅读APP朗读引擎的豆包语音朗读逆向�
 #### DoBaoTTS
 - 🎬 B站项目介绍教程：[DoBaoTTS项目正式介绍与教程](https://www.bilibili.com/video/BV1BcSDBbEwf)
 
-<iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.bilibili.com/blackboard/webplayer/mbplayer.html?bvid=BV1BcSDBbEwf&page=1" title="Bilibili video" frameborder="0" allowfullscreen> </iframe>
+<div style="position: relative; width: 100%; padding-bottom: 56.25%; /* 16:9 比例 = 9/16 = 0.5625 */">
+<iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://player.bilibili.com/player.html?bvid=BV1BcSDBbEwf&page=1" title="Bilibili video" frameborder="0" allowfullscreen>
+</iframe>
+</div>
 
 - 🎬 B站资源分享视频：[项目下载与更新说明](https://www.bilibili.com/video/BV1uCdfBWEng)
 
-<iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://player.bilibili.com/player.html?bvid=BV1uCdfBWEng&page=1" title="Bilibili video" frameborder="0" allowfullscreen> </iframe>
+<div style="position: relative; width: 100%; padding-bottom: 56.25%; /* 16:9 比例 = 9/16 = 0.5625 */">
+<iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://player.bilibili.com/player.html?bvid=BV1uCdfBWEng&page=1" title="Bilibili video" frameborder="0" allowfullscreen> 
+</iframe>
+</div>
 
 - 📱 酷安详细分享：[郁莲仰慕辰 项目动态](https://www.coolapk.com/feed/70200482?s=ZmRmNzZiMDYzM2E5MWRnNmEyZDJkOGJ6a1631)
 
 #### MiMo-TTS
 - 🎬 B站版本更新视频：[MIMO-V2.5-TTS 听书方案更新](https://www.bilibili.com/video/BV1VUozBGEyf)
 
-<iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://player.bilibili.com/player.html?bvid=BV1VUozBGEyf&page=1" title="Bilibili video" frameborder="0" allowfullscreen> </iframe>
+<div style="position: relative; width: 100%; padding-bottom: 56.25%; /* 16:9 比例 = 9/16 = 0.5625 */">
+<iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://player.bilibili.com/player.html?bvid=BV1VUozBGEyf&page=1" title="Bilibili video" frameborder="0" allowfullscreen>
+ </iframe>
+</div>
 
 ### 作者主页
 - 🏠 B站作者主页：[夜雨扰心弦](https://space.bilibili.com/3706943998789966)
