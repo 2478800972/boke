@@ -7,97 +7,124 @@ order: 3
 <div class="friend-list">
   {% for friend in site.data.friends %}
     <div class="friend-card">
-      <img src="{{ friend.avatar }}" alt="{{ friend.name }}" class="friend-avatar" loading="lazy">
+      <img src="{{ friend.avatar }}" alt="{{ friend.name }}" class="friend-avatar" loading="lazy" nolightbox>
       <div class="friend-content">
         <div class="friend-name">{{ friend.name }}</div>
         <div class="friend-desc">{{ friend.description }}</div>
       </div>
-      <a href="{{ friend.url }}" target="_blank" class="card-link" aria-label="访问{{ friend.name }}的博客"></a>
+      <a href="{{ friend.url }}" target="_blank" class="card-link" rel="noopener noreferrer"></a>
     </div>
   {% endfor %}
 </div>
 
 <style>
-/* 移除页面标题底部分隔线 */
+/* 移除页面标题下方的分隔线 */
 .page-header {
   border-bottom: 0 !important;
   padding-bottom: 0 !important;
 }
 
-/* 友链列表容器 */
+/* 列表容器（纵向排列） */
 .friend-list {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  margin-top: 20px;
+  gap: 0;
+  margin-top: 24px;
 }
 
-/* 单个友链卡片 */
+/* 每个卡片：纵向布局，头像在上，文字在下 */
 .friend-card {
-  position: relative;
+  position: relative;          /* 为隐形链接提供定位上下文 */
   display: flex;
-  align-items: center;
-  padding: 16px;
+  flex-direction: column;      /* ⬅️ 纵向排列 */
+  align-items: center;         /* 水平居中（可选，也可左对齐） */
+  padding: 24px 20px 20px;
   border-radius: 16px;
-  background-color: var(--bg-secondary, #ffffff);
-  transition: background-color 0.2s ease;
+  background: transparent;
+  transition: background 0.25s ease;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.12);
+  text-align: center;          /* 文字居中，也可以改为 left */
+}
+
+.friend-card:last-child {
+  border-bottom: none;
 }
 
 .friend-card:hover {
-  background-color: var(--surface-hover, #f5f5f5);
+  background: rgba(128, 128, 128, 0.05);
 }
 
-/* 左侧圆角头像 */
+/* 头像 */
 .friend-avatar {
-  width: 64px;
-  height: 64px;
-  border-radius: 12px;
+  width: 72px;                /* 大一点更醒目 */
+  height: 72px;
+  border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
+  position: relative;
   z-index: 1;
+  border: 2px solid var(--border-color, #e0e0e0);
+  margin-bottom: 12px;        /* 与文字间距 */
 }
 
-/* 右侧文字区 */
+/* 文字内容区 */
 .friend-content {
-  margin-left: 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
+  position: relative;
   z-index: 1;
-  overflow: hidden;
+  width: 100%;                /* 让内部文字撑满，方便控制对齐 */
 }
 
 .friend-name {
-  font-size: 20px;
+  font-size: 1.2rem;
   font-weight: 600;
-  color: var(--text-primary, #1f1f1f);
-  line-height: 1.2;
+  margin: 0;
+  color: var(--text-color, #1f1f1f);
 }
 
 .friend-desc {
-  font-size: 14px;
-  color: var(--text-secondary, #666666);
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  line-height: 1.2;
+  font-size: 0.9rem;
+  margin: 6px 0 0 0;
+  color: var(--text-muted, #6c6c6c);
+  /* 描述文字如果太长，可以折行或截断，这里让它自动换行 */
+  word-break: break-word;
 }
 
-/* 整卡隐形点击层：点击卡片任意位置都能跳转 */
+/* 整卡点击的隐形链接 */
 .card-link {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   z-index: 0;
+  text-decoration: none !important;
+  border-radius: 16px;
 }
 
-/* 深色模式自动适配 */
+/* ========== 深色模式适配 ========== */
 [data-theme="dark"] .friend-card {
-  background-color: var(--bg-secondary);
+  border-bottom-color: rgba(255, 255, 255, 0.08);
 }
+
 [data-theme="dark"] .friend-card:hover {
-  background-color: var(--surface-hover);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+[data-theme="dark"] .friend-avatar {
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* ========== 响应式 ========== */
+@media (max-width: 576px) {
+  .friend-card {
+    padding: 18px 14px 16px;
+  }
+  .friend-avatar {
+    width: 56px;
+    height: 56px;
+  }
+  .friend-name {
+    font-size: 1rem;
+  }
+  .friend-desc {
+    font-size: 0.8rem;
+  }
 }
 </style>

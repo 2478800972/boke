@@ -1,16 +1,39 @@
-- name: AirboZH
-  avatar: /assets/img/头像.jpg   # 头像路径
-  description: 草蔓蔓满山岗
+- name: 落雨天
+  avatar: /assets/img/头像.jpg
+  description: 生锈的感情逢雨，思想在烟圈里迷藏
   url: https://你的友链地址.com
 
-- name: Halo
+- name: 白文鸟
   avatar: /assets/img/头像.jpg
-  description: 爱码士。现任Halo开源团队首席打杂···
-  url: https://halo.run
+  description: 湿羽迷发冷城，撞入褐色玻璃黄昏
+  url: https://你的友链地址.com
 
-- name: JohnNiang
+- name: 雾中蜃楼
   avatar: /assets/img/头像.jpg
-  description: Core contributor of Halo organization.
-  url: https://johnniang.me
+  description: 雨雾裹着昏灯，浮成世间一座蜃楼
+  url: https://你的友链地址.com
 
-# ... 依次添加所有友链
+- name: 冬夜冷雨
+  avatar: /assets/img/头像.jpg
+  description: 温州街巷淅沥，积起寸厚晚来寒意
+  url: https://你的友链地址.com
+
+- name: 心底雨季
+  avatar: /assets/img/头像.jpg
+  description: 雨未湿身，是心底自入了雨季
+  url: https://你的友链地址.com
+
+- name: 薄荷酒冰
+  avatar: /assets/img/头像.jpg
+  description: 白雾融白屋，绿窗灯影如薄荷冰
+  url: https://你的友链地址.com
+
+- name: 时间边境
+  avatar: /assets/img/头像.jpg
+  description: 诗意字句间，落一场湿漉漉的雨
+  url: https://你的友链地址.com
+
+- name: 浮光候雨
+  avatar: /assets/img/头像.jpg
+  description: 经幡化蝶，等一场轮回的雨
+  url: https://你的友链地址.com
