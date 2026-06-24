@@ -8,7 +8,7 @@ order: 3
 <div class="friend-list">
   {% for friend in site.data.friends %}
     <a href="{{ friend.url }}" target="_blank" class="friend-item">
-      <img src="{{ friend.avatar }}" alt="{{ friend.name }}" class="friend-avatar">
+      <img src="{{ friend.avatar }}" alt="{{ friend.name }}" class="friend-avatar nolightbox" loading="lazy">
       <div class="friend-info">
         <h3>{{ friend.name }}</h3>
         <p>{{ friend.description }}</p>
@@ -32,7 +32,7 @@ order: 3
   margin-top: 20px;
 }
 
-/* 单个友链项：横向布局 */
+/* 单个友链项：整项可点击 */
 .friend-item {
   display: flex;
   align-items: center;
@@ -48,7 +48,7 @@ order: 3
   background-color: var(--surface-hover, #f5f5f5);
 }
 
-/* 左侧小头像（圆角方形） */
+/* 左侧头像 */
 .friend-avatar {
   width: 56px;
   height: 56px;
@@ -82,11 +82,17 @@ order: 3
   white-space: nowrap;
 }
 
-/* 深色模式自动适配 */
+/* 深色模式适配 */
 [data-theme="dark"] .friend-item {
   background-color: var(--bg-secondary);
 }
 [data-theme="dark"] .friend-item:hover {
   background-color: var(--surface-hover);
+}
+
+/* 兜底：强制消除灯箱多余包裹的影响 */
+.friend-list .popup.img-link {
+  all: unset;
+  display: contents;
 }
 </style>
