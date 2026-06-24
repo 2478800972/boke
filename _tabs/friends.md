@@ -1,6 +1,7 @@
+
 ---
 layout: page          # 使用页面布局
-title: 友情链接        # 标题
+title: 友链        # 标题
 icon: fas fa-link    # 侧边栏显示的图标
 order: 3             # 侧边栏显示顺序（数字越小越靠前）
 ---
