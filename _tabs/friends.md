@@ -18,6 +18,12 @@ order: 3
 </div>
 
 <style>
+/* 移除页面标题下方的分隔线 */
+.page-header {
+  border-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
 /* 单列列表容器 */
 .friend-list {
   display: flex;
