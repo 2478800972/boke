@@ -1,16 +1,21 @@
-- name: AirboZH
-  avatar: /assets/img/头像.jpg   # 头像路径
-  description: 草蔓蔓满山岗
-  url: https://你的友链地址.com
+- group: Halo
+  list:
+    - name: Ryan Wang
+      avatar: /assets/img/头像.jpg
+      description: 爱码士。现任 Halo 开源团队首席打杂…
+      url: https://halo.run
+    - name: JohnNiang
+      avatar: /assets/img/头像.jpg
+      description: Core contributor of Halo organization.
+      url: https://johnniang.me
 
-- name: Halo
-  avatar: /assets/img/头像.jpg
-  description: 爱码士。现任Halo开源团队首席打杂···
-  url: https://halo.run
-
-- name: JohnNiang
-  avatar: /assets/img/头像.jpg
-  description: Core contributor of Halo organization.
-  url: https://johnniang.me
-
-# ... 依次添加所有友链
+- group: 原则
+  list:
+    - name: 小孙同学
+      avatar: /assets/img/头像.jpg
+      description: 路虽远行则将至，事虽难做则必成！
+      url: https://example.com
+    - name: 码农小易
+      avatar: /assets/img/头像.jpg
+      description: 全栈开发工程师，专注于构建应用程序…
+      url: https://example.com
