@@ -1,14 +1,13 @@
 ---
 ---
 
-# 注意：文件开头必须有这两行三短横线，否则Jekyll不会处理
-
 .friend-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 1.5rem;
   margin-top: 1.5rem;
 }
+
 
 
 .friend-card {
