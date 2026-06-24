@@ -7,13 +7,15 @@ order: 3
 
 <div class="friend-list">
   {% for friend in site.data.friends %}
-    <a href="{{ friend.url }}" target="_blank" class="friend-item">
-      <img src="{{ friend.avatar }}" alt="{{ friend.name }}" class="friend-avatar nolightbox" loading="lazy">
+    <div class="friend-item">
+      <img src="{{ friend.avatar }}" alt="{{ friend.name }}" class="friend-avatar" loading="lazy">
       <div class="friend-info">
-        <h3>{{ friend.name }}</h3>
+        <a href="{{ friend.url }}" target="_blank" class="friend-name">{{ friend.name }}</a>
         <p>{{ friend.description }}</p>
       </div>
-    </a>
+      <!-- 整卡点击跳转的隐形链接 -->
+      <a href="{{ friend.url }}" target="_blank" class="friend-link-mask" aria-label="访问{{ friend.name }}的博客"></a>
+    </div>
   {% endfor %}
 </div>
 
@@ -32,15 +34,14 @@ order: 3
   margin-top: 20px;
 }
 
-/* 单个友链项：整项可点击 */
+/* 单个友链卡片 */
 .friend-item {
+  position: relative;
   display: flex;
   align-items: center;
   padding: 14px 16px;
   border-radius: 12px;
   background-color: var(--bg-secondary, #ffffff);
-  text-decoration: none;
-  color: inherit;
   transition: background-color 0.2s ease;
 }
 
@@ -55,6 +56,7 @@ order: 3
   border-radius: 12px;
   object-fit: cover;
   flex-shrink: 0;
+  z-index: 1;
 }
 
 /* 右侧文字区 */
@@ -64,13 +66,14 @@ order: 3
   flex-direction: column;
   gap: 4px;
   overflow: hidden;
+  z-index: 1;
 }
 
-.friend-info h3 {
-  margin: 0;
+.friend-name {
   font-size: 18px;
   font-weight: 600;
   color: var(--text-primary, #1f1f1f);
+  text-decoration: none;
 }
 
 .friend-info p {
@@ -82,6 +85,16 @@ order: 3
   white-space: nowrap;
 }
 
+/* 整卡隐形点击层：覆盖整张卡片，实现点击任意位置跳转 */
+.friend-link-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
 /* 深色模式适配 */
 [data-theme="dark"] .friend-item {
   background-color: var(--bg-secondary);
@@ -89,10 +102,7 @@ order: 3
 [data-theme="dark"] .friend-item:hover {
   background-color: var(--surface-hover);
 }
-
-/* 兜底：强制消除灯箱多余包裹的影响 */
-.friend-list .popup.img-link {
-  all: unset;
-  display: contents;
+[data-theme="dark"] .friend-name {
+  color: var(--text-primary);
 }
 </style>
