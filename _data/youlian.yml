@@ -1,0 +1,16 @@
+- name: AirboZH
+  avatar: /assets/images/avatars/airbozh.jpg   # 头像路径
+  description: 草蔓蔓满山岗
+  url: https://你的友链地址.com
+
+- name: Halo
+  avatar: /assets/images/avatars/halo.jpg
+  description: 爱码士。现任Halo开源团队首席打杂···
+  url: https://halo.run
+
+- name: JohnNiang
+  avatar: /assets/images/avatars/johnniang.jpg
+  description: Core contributor of Halo organization.
+  url: https://johnniang.me
+
+# ... 依次添加所有友链
