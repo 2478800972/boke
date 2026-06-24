@@ -6,7 +6,7 @@ order: 3             # 侧边栏显示顺序（数字越小越靠前）
 ---
 
 <div class="friend-grid">
-  {% for friend in site.data.youlian %}
+  {% for friend in site.data.friends %}
     <a href="{{ friend.url }}" target="_blank" class="friend-card">
       <img src="{{ friend.avatar }}" alt="{{ friend.name }}" class="friend-avatar">
       <div class="friend-info">
