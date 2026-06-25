@@ -131,7 +131,7 @@ comments:
     reactions_enabled: # 可选，默认为 '1'
 
   # Waline 评论配置
-  waline:
+ waline:
     serverURL: "https://waline.cc.cd"
     lang: zh-CN
     reaction: true
