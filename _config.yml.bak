@@ -131,7 +131,15 @@ comments:
     
     
     
-
+    # ↓↓↓ 以下是新增的 Waline 配置，直接追加到这里即可 ↓↓↓
+   waline:
+     serverURL: "https://waline.cc.cd"  # 必填，替换为你部署的 Waline 服务地址
+     lang: zh-CN
+     reaction: true       # 是否开启表情反应
+     requiredMeta: [nick] # 评论必填项
+     meta: [nick, mail, link] # 评论者可填写信息
+     pageview: true      # 是否开启页面统计
+   # ↑↑↑ 新增结束 ↑↑↑
 
 
 
