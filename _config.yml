@@ -1,7 +1,7 @@
 # 站点配置
 
 # 引入主题
-theme: jekyll-theme-chirpy
+#theme: jekyll-theme-chirpy
 
 # 网页语言 › 参考：http://www.lingoes.net/en/translator/langcode.htm
 # 若语言名称与 `_data/locales` 文件夹下的文件名一致，页面布局语言也会随之切换；
@@ -107,14 +107,27 @@ social_preview_image: # 字符串，支持本地或跨域资源
 # 布尔值，文章目录的全局开关
 toc: true
 
-
-
-
-
-
-
-
-
+comments:
+  # 文章评论系统的全局开关。留空表示禁用。
+  provider: # [disqus | utterances | giscus]
+  # 各评论服务商配置如下：
+  disqus:
+    shortname: # 填写 Disqus shortname › 参考：https://help.disqus.com/en/articles/1717111-what-s-a-shortname
+  # utterances 配置 › 参考：https://utteranc.es/
+  utterances:
+    repo: # <GitHub用户名>/<仓库名>
+    issue_term: # < url | pathname | title | ...>
+  # Giscus 配置 › 参考：https://giscus.app
+  giscus:
+    repo: # <GitHub用户名>/<仓库名>
+    repo_id:
+    category:
+    category_id:
+    mapping: # 可选，默认为 'pathname'
+    strict: # 可选，默认为 '0'
+    input_position: # 可选，默认为 'bottom'
+    lang: # 可选，默认与 `site.lang` 一致
+    reactions_enabled: # 可选，默认为 '1'
 
 # 自托管静态资源，可选 › 参考：https://github.com/cotes2020/chirpy-static-assets
 assets:
