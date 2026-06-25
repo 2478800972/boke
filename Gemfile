@@ -12,3 +12,8 @@ platforms :windows, :jruby do
 end
 
 gem "wdm", "~> 0.2.0", :platforms => [:windows]
+
+# ↓↓↓ 追加：Ruby 3.4 缺失的标准库依赖 ↓↓↓
+gem "csv"
+gem "base64"
+gem "bigdecimal"
