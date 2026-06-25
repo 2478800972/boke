@@ -8,6 +8,7 @@ tags: [无限流, 属性加点, 原创世, 暴力美学]
 pin:                 # true 表示置顶，false 或不写则不置顶
 math: true                # 启用数学公式（需要时设为 true）
 mermaid: true             # 启用流程图（需要时设为 true）
+comments: true
 ---
 
 # 🌌 横跨诸天的暴力美学：《神秘之旅》推文

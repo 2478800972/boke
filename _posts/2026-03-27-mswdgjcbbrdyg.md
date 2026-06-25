@@ -8,6 +8,7 @@ tags: [末世, 副本, 沙雕]
 pin:                 # true 表示置顶，false 或不写则不置顶
 math: true                # 启用数学公式（需要时设为 true）
 mermaid: true             # 启用流程图（需要时设为 true）
+comments: true
 ---
 
 # 📜 拼演技的末世，我比别人多一个关键词：《末世：我的关键词比别人多一个》推文

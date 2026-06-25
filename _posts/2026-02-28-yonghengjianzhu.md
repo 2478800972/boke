@@ -9,6 +9,7 @@ tags: [东方玄幻, 诸天万界, 属性加点]
 pin:                 # true 表示置顶，false 或不写则不置顶
 math: true                # 启用数学公式（需要时设为 true）
 mermaid: true             # 启用流程图（需要时设为 true）
+comments: true
 ---
 
 # 🗡️ 四世求存的黑暗仙侠：《永恒剑主》推文

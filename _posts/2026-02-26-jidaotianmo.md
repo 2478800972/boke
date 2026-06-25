@@ -8,6 +8,7 @@ tags: [极道流, 诸天万界, 开山之作]
 pin:                 # true 表示置顶，false 或不写则不置顶
 math: true                # 启用数学公式（需要时设为 true）
 mermaid: true             # 启用流程图（需要时设为 true）
+comments: true
 ---
 
 # 📖 一击入魂的力量美学：《极道天魔》推文
