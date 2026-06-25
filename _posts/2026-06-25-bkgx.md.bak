@@ -10,7 +10,7 @@ math: true                # 启用数学公式（需要时设为 true）
 mermaid: true             # 启用流程图（需要时设为 true）
 comments: true
 ---
-# 博客本地修改 & GitHub 推送标准流程（避坑指南）
+# 博客本地修改 \& GitHub 推送标准流程（避坑指南）
 
 ## 一、核心正确流程（**最重要、以后固定照做**）
 
