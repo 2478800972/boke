@@ -2,7 +2,7 @@
 title: Waline 评论ESM与UMD区别
 description: 一篇推文搞懂 Waline 两种引入方式，避免在静态页面中踩坑。
 author: 墨殇
-date: 2026-06-26 20:00:00 +0800
+date: 2026-06-26 08:00:00 +0800
 categories: [教程, 技术]
 tags: [Chirpy, Waline, 功能]
 pin:                 # true 表示置顶，false 或不写则不置顶

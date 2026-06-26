@@ -2,7 +2,7 @@
 title: Waline 多站点互通配置指南
 description: 两个博客站点共用同一个 Waline 评论系统，但评论数据不互通。
 author: 墨殇
-date: 2026-06-26 20:00:00 +0800
+date: 2026-06-26 08:00:00 +0800
 categories: [教程, 技术]
 tags: [Chirpy, Waline, 功能]
 pin:                 # true 表示置顶，false 或不写则不置顶

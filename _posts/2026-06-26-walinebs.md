@@ -2,7 +2,7 @@
 title: Waline 评论系统 Vercel 部署教程
 description: Waline 是一款基于 Valine 衍生的简洁、安全的评论系统，支持浏览量统计。通过 Vercel 部署服务端，再配合 Neon 数据库，即可快速搭建属于自己的评论系统。以下是完整的部署步骤。
 author: 墨殇
-date: 2026-06-26 20:00:00 +0800
+date: 2026-06-26 08:00:00 +0800
 categories: [教程, 技术]
 tags: [Chirpy, Waline, 功能]
 pin:                 # true 表示置顶，false 或不写则不置顶
