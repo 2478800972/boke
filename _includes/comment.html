@@ -146,8 +146,8 @@
       Waline.init({
         el: '#waline',
         serverURL: 'https://waline.cc.cd',
-        // 统一路径：去掉开头的 /boke，使 GitHub Pages（仓库名为 boke）与其他站点的评论 path 一致，实现数据互通，原版为path: window.location.pathname,
-        path: '/posts/wz/',
+<!-- 统一路径：去掉开头的 /boke，使 GitHub Pages（仓库名为 boke）与其他站点的评论 path 一致，实现数据互通，原版为path: window.location.pathname, -->
+        path: window.location.pathname.replace(/^\/boke/, ''),
         dark: 'html[data-mode="dark"]',
         lang: 'zh-CN',
         meta: ['nick', 'mail', 'link'],
