@@ -5,8 +5,9 @@
   <div id="waline"></div>
 </section>
 
-
+<!-- 引入 Waline 样式 -->
 <link rel="stylesheet" href="https://unpkg.com/@waline/client@v3/dist/waline.css" />
+
 <style>
   /* ========== 全局主题：黑色系 ========== */
   :root {
@@ -50,7 +51,7 @@
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
   }
 
-  /* 输入框聚焦不变灰 */
+  /* 输入框聚焦样式 */
   #waline .wl-input,
   #waline .wl-editor {
     border-radius: 0.375rem;
@@ -126,19 +127,19 @@
   }
 </style>
 
-<script type="module">
-  // 等DOM完全加载后再初始化，避免找不到挂载点
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initWaline);
-  } else {
-    initWaline();
-  }
+<!-- 引入 Waline UMD 脚本 -->
+<script src="https://unpkg.com/@waline/client@v3/dist/waline.umd.js" defer></script>
 
-  async function initWaline() {
+<script>
+  // 等DOM和脚本都加载完成后初始化
+  function initWaline() {
+    if (!window.Waline) {
+      setTimeout(initWaline, 100);
+      return;
+    }
+
     try {
-      const { init } = await import('https://unpkg.com/@waline/client@v3/dist/waline.umd.js');
-      
-      init({
+      Waline.init({
         el: '#waline',
         serverURL: 'https://waline.cc.cd',
         dark: 'html[data-mode="dark"]',
@@ -148,9 +149,9 @@
         login: 'disable',
         wordLimit: 500,
         pageSize: 10,
-        noCopyright: true, // 修正参数名：隐藏版权信息
+        copyright: false, // 正确参数：隐藏版权信息
         commentSorting: 'latest',
-        search: false, // 禁用GIF搜索，解决转圈加载问题
+        search: false, // 禁用GIF搜索，避免加载转圈
         locale: {
           placeholder: '你可以在这里输入评论内容... 但不要乱输入',
           submit: '来一发吗？',
@@ -180,6 +181,12 @@
       document.querySelector('#waline').innerHTML = 
         '<p style="text-align:center;color:#999;padding:2rem">评论区加载失败，请刷新页面重试</p>';
     }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initWaline);
+  } else {
+    initWaline();
   }
 </script>
 {% endif %}
