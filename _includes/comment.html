@@ -126,53 +126,44 @@
   }
 </style>
 
-<!-- 关键改动：使用 UMD 格式的 Waline 脚本（而不是 type="module"） -->
-<script src="https://unpkg.com/@waline/client@v3/dist/waline.umd.js"></script>
+<script type="module">
+  import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
 
-<script>
-  // 确保 DOM 完全加载后再初始化
-  document.addEventListener('DOMContentLoaded', function() {
-    var walineContainer = document.querySelector('#waline');
-    if (!walineContainer) {
-      console.warn('未找到 #waline 容器，可能评论被禁用或页面未加载完成。');
-      return;
-    }
+  // 确保容器存在
+  const walineContainer = document.querySelector('#waline');
+  if (!walineContainer) {
+    console.warn('Waline: 未找到 #waline 容器');
+  } else {
+    // 初始化 Waline
+    const walineInstance = init({
+      el: '#waline',
+      serverURL: 'https://waline.cc.cd',
+      path: window.location.pathname,
+      dark: 'html[data-mode="dark"]',
+      lang: 'zh-CN',
+      meta: ['nick', 'mail', 'link'],
+      requiredMeta: [],
+      login: 'disable',
+      wordLimit: 500,
+      pageSize: 10,
+      copyright: false,
+      commentSorting: 'latest',
+      search: false,
+      locale: {
+        placeholder: '你可以在这里输入评论内容... 但不要乱输入',
+        submit: '来一发吗？',
+        optional: '可选',
+        nick: '昵称',
+        mail: '邮箱',
+        link: '网址'
+      }
+    });
 
-    try {
-      // Waline 现在暴露为全局对象，直接调用 Waline.init
-      Waline.init({
-        el: '#waline',
-        serverURL: 'https://waline.cc.cd',
-        path: window.location.pathname,    // 确保每篇文章独立评论
-        dark: 'html[data-mode="dark"]',
-        lang: 'zh-CN',
-        meta: ['nick', 'mail', 'link'],
-        requiredMeta: [],
-        login: 'disable',
-        wordLimit: 500,
-        pageSize: 10,
-        copyright: false,
-        commentSorting: 'latest',
-        search: false,                     // 禁用 GIF 搜索，避免转圈
-        locale: {
-          placeholder: '你可以在这里输入评论内容... 但不要乱输入',
-          submit: '来一发吗？',
-          optional: '可选',
-          nick: '昵称',
-          mail: '邮箱',
-          link: '网址'
-        }
-      });
-      console.log('✅ Waline 初始化成功（UMD 模式）');
-    } catch (err) {
-      console.error('❌ Waline 初始化失败：', err);
-    }
-
-    // ----- 移动端软键盘弹出自动上移（保留原有逻辑） -----
+    // 移动端软键盘弹出自动上移
     function scrollToInput() {
-      var panel = walineContainer.querySelector('.wl-panel');
+      const panel = walineContainer.querySelector('.wl-panel');
       if (panel) {
-        setTimeout(function() {
+        setTimeout(() => {
           panel.scrollIntoView({ behavior: 'smooth', block: 'end' });
         }, 350);
       }
@@ -182,6 +173,8 @@
     if (window.visualViewport) {
       window.visualViewport.addEventListener('resize', scrollToInput);
     }
-  });
+
+    console.log('✅ Waline 初始化成功');
+  }
 </script>
 {% endif %}
