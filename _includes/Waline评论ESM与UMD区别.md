@@ -10,7 +10,7 @@ math: true                # 启用数学公式（需要时设为 true）
 mermaid: true             # 启用流程图（需要时设为 true）
 image:
   path: https://cdn.jsdmirror.com/gh/2478800972/boke@main/assets/img/tw/wz/蓝楹花.png      # 预览图路径（注意加上 /boke 前缀）
-  alt: 蓝楹花呀ᔦ ° ꒳ ° ᔨ ̖́-
+  alt: 蓝楹花呀ᔦ ° ꒳ ° ᔨ
 comments: true
 ---
 

@@ -10,7 +10,7 @@ math: true                # 启用数学公式（需要时设为 true）
 mermaid: true             # 启用流程图（需要时设为 true）
 image:
   path: https://cdn.jsdmirror.com/gh/2478800972/boke@main/assets/img/tw/wz/绣球花2.png      # 预览图路径（注意加上 /boke 前缀）
-  alt: 美丽的绣球花•͈ᴗ⁃͈ ✧
+  alt: 美丽的绣球花
 comments: true
 ---
 
