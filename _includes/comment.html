@@ -136,7 +136,7 @@
 
   async function initWaline() {
     try {
-      const { init } = await import('https://unpkg.com/@waline/client@v3/dist/waline.js');
+      const { init } = await import('https://unpkg.com/@waline/client@v3/dist/waline.umd.js');
       
       init({
         el: '#waline',
