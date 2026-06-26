@@ -1,19 +1,24 @@
-{% if page.comments %}
-<div id="waline" style="border:2px solid red;padding:20px;"></div>
-
+<div id="waline" style="border:2px solid red;padding:20px;min-height: 100px;"></div>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@waline/client@v3/dist/waline.css">
-<script src="https://cdn.jsdelivr.net/npm/@waline/client@v3/dist/waline.js"></script>
+
+<!-- 必须用 umd 版本，才会暴露全局 Waline 对象 -->
+<script src="https://cdn.jsdelivr.net/npm/@waline/client@v3/dist/waline.umd.js"></script>
 
 <script>
-document.addEventListener('DOMContentLoaded',function(){
+document.addEventListener('DOMContentLoaded', function () {
   console.log('开始初始化Waline');
-  let box = document.querySelector('#waline');
-  console.log(box); // 打印容器是否找到
+  const box = document.querySelector('#waline');
+  console.log('容器元素：', box);
 
-  Waline.init({
-    el: '#waline',
-    serverURL: 'https://waline.cc.cd'
-  });
-})
+  try {
+    Waline.init({
+      el: '#waline',
+      serverURL: 'https://waline.cc.cd',
+      path: window.location.pathname
+    });
+    console.log('Waline 初始化调用完成');
+  } catch (err) {
+    console.error('Waline 初始化失败：', err);
+  }
+});
 </script>
-{% endif %}
