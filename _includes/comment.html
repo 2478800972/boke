@@ -1,10 +1,12 @@
-<!-- Waline 评论区 - 黑色主题 + 明暗适配 + 移动端防遮挡 + 背景图置顶 -->
+{% if page.comments %}
+<!-- Waline 评论区 - 黑色主题 + 明暗适配 + 移动端防遮挡 + 背景图置顶 + 隐藏版本号 -->
 <section class="mt-5 pt-4 border-top">
   <h4 class="mb-4 fw-medium">{{ site.data.locales[lang].comment.comments }}</h4>
   <div id="waline"></div>
 </section>
 
 <link rel="stylesheet" href="https://unpkg.com/@waline/client@v3/dist/waline.css" />
+
 <style>
   /* ========== 全局主题：黑色系 ========== */
   :root {
@@ -122,50 +124,52 @@
     #waline .wl-panel::after { width: 120px; right: 12px; bottom: 20px; }
     #waline .wl-panel { border-radius: 10px; }
   }
+
   /* ========== 隐藏版本号和版权信息 ========== */
-#waline .wl-power {
-  display: none !important;
-}
+  #waline .wl-power {
+    display: none !important;
+  }
 </style>
 
-<script type="module">
-  import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
-  init({
-    el: '#waline',
-    serverURL: 'https://waline.cc.cd',
-    dark: 'html[data-mode="dark"]',
-    lang: 'zh-CN',
-    meta: ['nick', 'mail', 'link'],
-    requiredMeta: [],
-    login: 'disable',
-    wordLimit: 500,
-    pageSize: 10,
-    copyright: false,
-    commentSorting: 'latest',
-    search: false, // 禁用GIF搜索，解决转圈问题
-    locale: {
-      placeholder: '你可以在这里输入评论内容... 但不要乱输入',
-      submit: '来一发吗？',
-      optional: '可选',
-      nick: '昵称',
-      mail: '邮箱',
-      link: '网址'
+<!-- 关键改动：使用 UMD 格式，而非 type="module" -->
+<script src="https://unpkg.com/@waline/client@v3/dist/waline.umd.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var container = document.querySelector('#waline');
+    if (!container) {
+      console.warn('未找到 #waline 容器，可能评论被禁用或页面未加载完成。');
+      return;
+    }
+
+    try {
+      Waline.init({
+        el: '#waline',
+        serverURL: 'https://waline.cc.cd',
+        path: window.location.pathname,
+        dark: 'html[data-mode="dark"]',
+        lang: 'zh-CN',
+        meta: ['nick', 'mail', 'link'],
+        requiredMeta: [],
+        login: 'disable',
+        wordLimit: 500,
+        pageSize: 10,
+        copyright: false,
+        commentSorting: 'latest',
+        search: false,
+        locale: {
+          placeholder: '你可以在这里输入评论内容... 但不要乱输入',
+          submit: '来一发吗？',
+          optional: '可选',
+          nick: '昵称',
+          mail: '邮箱',
+          link: '网址'
+        }
+      });
+      console.log('✅ Waline 初始化成功 (UMD 模式)');
+    } catch (err) {
+      console.error('❌ Waline 初始化失败：', err);
     }
   });
-
-  // 移动端软键盘弹出自动上移
-  const walineBox = document.querySelector('#waline');
-  function scrollToInput() {
-    setTimeout(() => {
-      walineBox.querySelector('.wl-panel').scrollIntoView({
-        behavior: 'smooth',
-        block: 'end'
-      });
-    }, 350);
-  }
-  walineBox.addEventListener('focusin', scrollToInput);
-  if (window.visualViewport) {
-    window.visualViewport.addEventListener('resize', scrollToInput);
-  }
 </script>
 {% endif %}
