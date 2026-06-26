@@ -1,54 +1,19 @@
 {% if page.comments %}
-<!-- Waline 评论区 -->
-<section class="mt-5 pt-4 border-top">
-  <h4 class="mb-4 fw-medium">{{ site.data.locales[lang].comment.comments }}</h4>
-  <!-- 只保留这唯一一个容器，不要再重复写 -->
-  <div id="waline"></div>
-</section>
+<div id="waline" style="border:2px solid red;padding:20px;"></div>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@waline/client@v3/dist/waline.css">
-
 <script src="https://cdn.jsdelivr.net/npm/@waline/client@v3/dist/waline.js"></script>
+
 <script>
-// 等待DOM加载完毕再初始化，防止找不到元素
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded',function(){
+  console.log('开始初始化Waline');
+  let box = document.querySelector('#waline');
+  console.log(box); // 打印容器是否找到
+
   Waline.init({
     el: '#waline',
-    serverURL: 'https://waline.cc.cd',
-    dark: 'html[data-mode="dark"]',
-    lang: 'zh-CN',
-    meta: ['nick', 'mail', 'link'],
-    requiredMeta: [],
-    login: 'disable',
-    wordLimit: 500,
-    pageSize: 10,
-    copyright: false,
-    commentSorting: 'latest',
-    search: false,
-    locale: {
-      placeholder: '你可以在这里输入评论内容... 但不要乱输入',
-      submit: '来一发吗？',
-      optional: '可选',
-      nick: '昵称',
-      mail: '邮箱',
-      link: '网址'
-    }
+    serverURL: 'https://waline.cc.cd'
   });
-
-  // 移动端软键盘自动上移
-  const walineBox = document.querySelector('#waline');
-  function scrollToInput() {
-    setTimeout(() => {
-      walineBox.querySelector('.wl-panel')?.scrollIntoView({
-        behavior: 'smooth',
-        block: 'end'
-      });
-    }, 350);
-  }
-  walineBox.addEventListener('focusin', scrollToInput);
-  if (window.visualViewport) {
-    window.visualViewport.addEventListener('resize', scrollToInput);
-  }
-});
+})
 </script>
 {% endif %}
