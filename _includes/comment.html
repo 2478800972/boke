@@ -1,37 +1,187 @@
-<!-- 替换原有 unpkg 脚本为 jsDelivr 国内稳定源 -->
-<script src="https://cdn.jsdelivr.net/npm/@waline/client@v3/dist/waline.umd.js"></script>
+{% if page.comments %}
+<!-- Waline 评论区 - 黑色主题 + 明暗适配 + 移动端防遮挡 + 背景图置顶 -->
+<section class="mt-5 pt-4 border-top">
+  <h4 class="mb-4 fw-medium">{{ site.data.locales[lang].comment.comments }}</h4>
+  <div id="waline"></div>
+</section>
 
-<script>
-function initWaline() {
-  // 调试日志，排查正常后可删除
-  console.log('检查 Waline 脚本：', !!window.Waline);
-  
-  if (!window.Waline) {
-    setTimeout(initWaline, 300);
-    return;
+<link rel="stylesheet" href="https://unpkg.com/@waline/client@v3/dist/waline.css" />
+
+<style>
+  /* ========== 全局主题：黑色系 ========== */
+  :root {
+    --waline-theme-color: #000000;
+    --waline-active-color: #333333;
+    --waline-color: var(--text-color, #333);
+    --waline-bgcolor: var(--body-bg, #fff);
+    --waline-bgcolor-light: var(--card-bg, #f8f9fa);
+    --waline-border-color: var(--border-color, #e9ecef);
+    --waline-code-bgcolor: var(--code-bg, #f6f8fa);
+    --waline-info-color: var(--text-muted, #6c757d);
+    --waline-bq-color: var(--blockquote-bg, #f0f0f0);
+    --waline-avatar-radius: 50%;
+    --waline-font-size: 0.9375rem;
   }
 
-  Waline.init({
-    el: '#waline',
-    serverURL: 'https://waline.cc.cd', // 保留你原有的服务端地址
-    lang: 'zh-CN',
-    // 修正为数组格式：[最小字数, 最大字数]
-    wordLimit: [0, 500],
-    // 修正隐藏版权的正确参数名
-    noCopyright: true,
-    // 以下保留通用默认配置，你可按需增减原有参数
-    avatar: 'mp',
-    pageview: true,
-    requiredFields: ['nick'],
-  });
-  
-  console.log('初始化执行完成');
-}
+  html[data-mode="dark"] {
+    --waline-theme-color: #ffffff;
+    --waline-active-color: #dddddd;
+    --waline-color: var(--text-color, #c9d1d9);
+    --waline-bgcolor: var(--body-bg, #0d1117);
+    --waline-bgcolor-light: var(--card-bg, #161b22);
+    --waline-border-color: var(--border-color, #30363d);
+    --waline-code-bgcolor: var(--code-bg, #161b22);
+    --waline-info-color: var(--text-muted, #8b949e);
+    --waline-bq-color: var(--blockquote-bg, #21262d);
+  }
 
-// 兼容页面加载状态
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initWaline);
-} else {
-  initWaline();
-}
+  /* ========== 输入面板：永久白色卡片 ========== */
+  #waline .wl-panel {
+    position: relative;
+    background: #ffffff !important;
+    --waline-bgcolor: #ffffff;
+    --waline-color: #333333;
+    --waline-border-color: #e5e7eb;
+    --waline-bgcolor-light: #f9fafb;
+    --waline-info-color: #6b7280;
+    --waline-theme-color: #000000;
+    --waline-active-color: #333333;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  }
+
+  /* 输入框聚焦不变灰 */
+  #waline .wl-input,
+  #waline .wl-editor {
+    border-radius: 0.375rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    background: #ffffff !important;
+  }
+  #waline .wl-input:focus,
+  #waline .wl-editor:focus {
+    border-color: #000000;
+    box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.1);
+    background: #ffffff !important;
+  }
+
+  /* 提交按钮黑底白字 */
+  #waline .wl-btn {
+    border-radius: 8px;
+    font-weight: 500;
+  }
+  #waline .wl-btn.primary {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    border: none !important;
+  }
+  #waline .wl-btn.primary:hover {
+    background-color: #222222 !important;
+  }
+
+  /* ========== 右下角背景图 ========== */
+  #waline .wl-panel::after {
+    content: '';
+    position: absolute;
+    right: 24px;
+    bottom: 30px;
+    width: 190px;
+    height: auto;
+    aspect-ratio: 1 / 0.9;
+    background-image: url('https://cdn.jsdmirror.com/gh/2478800972/boke@main/assets/img/da.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    opacity: 0.9;
+    pointer-events: none;
+    z-index: 2;
+    transition: opacity 0.3s ease;
+    border-bottom-right-radius: 12px;
+  }
+
+  #waline .wl-header,
+  #waline .wl-editor,
+  #waline .wl-footer {
+    position: relative;
+    z-index: 1;
+  }
+
+  #waline .wl-card {
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  /* ========== 表情/GIF弹窗：最高层级，不会被遮挡 ========== */
+  #waline .wl-emoji-popup,
+  #waline .wl-gif-popup {
+    border-radius: 0.375rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    z-index: 99 !important;
+  }
+
+  /* 移动端适配 */
+  @media (max-width: 576px) {
+    #waline { --waline-avatar-size: 2.5rem; }
+    #waline .wl-panel::after { width: 120px; right: 12px; bottom: 20px; }
+    #waline .wl-panel { border-radius: 10px; }
+  }
+</style>
+
+<!-- 关键改动：使用 UMD 格式的 Waline 脚本（而不是 type="module"） -->
+<script src="https://unpkg.com/@waline/client@v3/dist/waline.umd.js"></script>
+
+<script>
+  // 确保 DOM 完全加载后再初始化
+  document.addEventListener('DOMContentLoaded', function() {
+    var walineContainer = document.querySelector('#waline');
+    if (!walineContainer) {
+      console.warn('未找到 #waline 容器，可能评论被禁用或页面未加载完成。');
+      return;
+    }
+
+    try {
+      // Waline 现在暴露为全局对象，直接调用 Waline.init
+      Waline.init({
+        el: '#waline',
+        serverURL: 'https://waline.cc.cd',
+        path: window.location.pathname,    // 确保每篇文章独立评论
+        dark: 'html[data-mode="dark"]',
+        lang: 'zh-CN',
+        meta: ['nick', 'mail', 'link'],
+        requiredMeta: [],
+        login: 'disable',
+        wordLimit: 500,
+        pageSize: 10,
+        copyright: false,
+        commentSorting: 'latest',
+        search: false,                     // 禁用 GIF 搜索，避免转圈
+        locale: {
+          placeholder: '你可以在这里输入评论内容... 但不要乱输入',
+          submit: '来一发吗？',
+          optional: '可选',
+          nick: '昵称',
+          mail: '邮箱',
+          link: '网址'
+        }
+      });
+      console.log('✅ Waline 初始化成功（UMD 模式）');
+    } catch (err) {
+      console.error('❌ Waline 初始化失败：', err);
+    }
+
+    // ----- 移动端软键盘弹出自动上移（保留原有逻辑） -----
+    function scrollToInput() {
+      var panel = walineContainer.querySelector('.wl-panel');
+      if (panel) {
+        setTimeout(function() {
+          panel.scrollIntoView({ behavior: 'smooth', block: 'end' });
+        }, 350);
+      }
+    }
+
+    walineContainer.addEventListener('focusin', scrollToInput);
+    if (window.visualViewport) {
+      window.visualViewport.addEventListener('resize', scrollToInput);
+    }
+  });
 </script>
+{% endif %}
