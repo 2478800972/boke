@@ -1,3 +1,8 @@
+- name: Pixiv书源
+  avatar: https://pixivsource.pages.dev/favicon-512x512.png
+  description: 最好的 Pixiv 小说阅读器
+  url: https://pixivsource.pages.dev/
+  
 - name: 落雨天
   avatar: /assets/img/头像.jpg
   description: 生锈的感情逢雨，思想在烟圈里迷藏
