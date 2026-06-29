@@ -30,6 +30,9 @@ permalink: /about/
       <li style="margin-bottom: 10px;">
         <a href="https://2478800972.github.io/momo/" target="_blank" style="text-decoration: none; color: var(--link-color); font-weight: 500; border-bottom: 1px solid transparent; transition: border-color 0.2s;">🏠 兮心官网</a>
       </li>
+      <li style="margin-bottom: 10px;">
+        <a href="https://momo-b5a.pages.dev/画廊/hl" target="_blank" style="text-decoration: none; color: var(--link-color); font-weight: 500; border-bottom: 1px solid transparent; transition: border-color 0.2s;">🕊️ 画廊</a>
+      </li>
     </ul>
   </div>
 
