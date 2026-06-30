@@ -129,6 +129,17 @@
   #waline .wl-power {
     display: none !important;
   }
+/* ========== 新增层级修复代码 ========== */
+#waline {
+  position: relative;
+  z-index: 0;
+  isolation: isolate;
+}
+
+#waline .wl-emoji-popup,
+#waline .wl-gif-popup {
+  z-index: 99 !important;
+}
 </style>
 
 <!-- 关键改动：使用 UMD 格式，而非 type="module" -->
@@ -152,6 +163,19 @@
         path: window.location.pathname.replace(/^\/boke/, ''),
         dark: 'html[data-mode="dark"]',
         lang: 'zh-CN',
+        
+        // 保留原生默认表情 + QQ表情 + 贴吧表情，如果后面不要了把这段代码删了就行不要漏了逗号
+  emoji: [
+    'https://unpkg.com/@waline/emojis@1.4.0/bilibili',
+    'https://unpkg.com/@waline/emojis@1.4.0/alus',
+    'https://unpkg.com/@waline/emojis@1.4.0/bmoji',
+    'https://unpkg.com/@waline/emojis@1.4.0/weibo',
+    'https://unpkg.com/@waline/emojis@1.4.0/qq',
+    'https://unpkg.com/@waline/emojis@1.4.0/tieba',
+    'https://unpkg.com/@waline/emojis@1.4.0/tw-emoji',
+    'https://unpkg.com/@waline/emojis@1.4.0/soul-emoji'
+],
+  
         meta: ['nick', 'mail', 'link'],
         requiredMeta: [],
         login: 'disable',
