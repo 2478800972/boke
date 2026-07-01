@@ -1,0 +1,67 @@
+- id: fm
+  title: "推文封面"
+  desc: "好看的封面"
+  cover: "/assets/img/tw/wz/白百合.png"
+ # location: "吉林" 可选择取消#注释启用地点
+  tags: ["壁纸","封面"]
+  # 存照片列表
+  photos:
+    - "/assets/img/tw/wz/白百合.png"
+    - "/assets/img/tw/wz/蓝楹花.png"
+    - "/assets/img/tw/wz/落日余晖.png"
+    - "/assets/img/tw/wz/绣球花1.png"
+    - "/assets/img/tw/wz/绣球花2.png"
+    - "/assets/img/tw/wz/郁金香.png"
+    - "/assets/img/tw/wz/白百合.png"
+
+- id: jiangnan
+  title: "烟雨江南"
+  desc: "江南的风景"
+  cover: "https://cdn.jsdmirror.com/gh/2478800972/pic@main/bz/风景/江南1.png"
+ # location: "江南"
+  tags: ["壁纸", "风景"]
+  photos:
+    - "https://cdn.jsdmirror.com/gh/2478800972/pic@main/bz/风景/江南1.png"
+    - "https://cdn.jsdmirror.com/gh/2478800972/pic@main/bz/风景/江南10.png"
+    - "https://cdn.jsdmirror.com/gh/2478800972/pic@main/bz/风景/江南11.png"
+    - "https://cdn.jsdmirror.com/gh/2478800972/pic@main/bz/风景/江南12.png"
+    - "https://cdn.jsdmirror.com/gh/2478800972/pic@main/bz/风景/江南13.png"
+    - "https://cdn.jsdmirror.com/gh/2478800972/pic@main/bz/风景/江南14.png"
+    - "https://cdn.jsdmirror.com/gh/2478800972/pic@main/bz/风景/江南15.png"
+    - "https://cdn.jsdmirror.com/gh/2478800972/pic@main/bz/风景/江南16.png"
+    - "https://cdn.jsdmirror.com/gh/2478800972/pic@main/bz/风景/江南17.png"
+    - "https://cdn.jsdmirror.com/gh/2478800972/pic@main/bz/风景/江南2.png"
+    - "https://cdn.jsdmirror.com/gh/2478800972/pic@main/bz/风景/江南3.png"
+    - "https://cdn.jsdmirror.com/gh/2478800972/pic@main/bz/风景/江南4.png"
+    - "https://cdn.jsdmirror.com/gh/2478800972/pic@main/bz/风景/江南5.png"
+    - "https://cdn.jsdmirror.com/gh/2478800972/pic@main/bz/风景/江南6.png"
+    - "https://cdn.jsdmirror.com/gh/2478800972/pic@main/bz/风景/江南7.png"
+    - "https://cdn.jsdmirror.com/gh/2478800972/pic@main/bz/风景/江南8.png"
+    - "https://cdn.jsdmirror.com/gh/2478800972/pic@main/bz/风景/江南9.png"
+    
+- id: bizhi
+  title: "美女壁纸"
+  desc: "弱柳扶风"
+  cover: "https://cdn.jsdmirror.com/gh/2478800972/pic@main/bz/美女/雨林1.png"
+ # location: "江南"
+  tags: ["壁纸", "美女"]
+  photos:
+    - "https://cdn.jsdmirror.com/gh/2478800972/pic@main/bz/美女/玉兔1.png"
+    - "https://cdn.jsdmirror.com/gh/2478800972/pic@main/bz/美女/玉兔2.png"
+    - "https://cdn.jsdmirror.com/gh/2478800972/pic@main/bz/美女/玉兔3.png"
+    - "https://cdn.jsdmirror.com/gh/2478800972/pic@main/bz/美女/玉兔4.png"
+    - "https://cdn.jsdmirror.com/gh/2478800972/pic@main/bz/美女/玉兔5.png"
+    - "https://cdn.jsdmirror.com/gh/2478800972/pic@main/bz/美女/玉兔6.png"
+    - "https://cdn.jsdmirror.com/gh/2478800972/pic@main/bz/美女/玉兔7.png"
+    - "https://cdn.jsdmirror.com/gh/2478800972/pic@main/bz/美女/玉兔8.png"
+    - "https://cdn.jsdmirror.com/gh/2478800972/pic@main/bz/美女/雨林1.png"
+    - "https://cdn.jsdmirror.com/gh/2478800972/pic@main/bz/美女/雨林10.png"
+    - "https://cdn.jsdmirror.com/gh/2478800972/pic@main/bz/美女/雨林11.png"
+    - "https://cdn.jsdmirror.com/gh/2478800972/pic@main/bz/美女/雨林2.png"
+    - "https://cdn.jsdmirror.com/gh/2478800972/pic@main/bz/美女/雨林3.png"
+    - "https://cdn.jsdmirror.com/gh/2478800972/pic@main/bz/美女/雨林4.png"
+    - "https://cdn.jsdmirror.com/gh/2478800972/pic@main/bz/美女/雨林5.png"
+    - "https://cdn.jsdmirror.com/gh/2478800972/pic@main/bz/美女/雨林6.png"
+    - "https://cdn.jsdmirror.com/gh/2478800972/pic@main/bz/美女/雨林7.png"
+    - "https://cdn.jsdmirror.com/gh/2478800972/pic@main/bz/美女/雨林8.png"
+    - "https://cdn.jsdmirror.com/gh/2478800972/pic@main/bz/美女/雨林9.png"

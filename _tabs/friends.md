@@ -1,7 +1,7 @@
 ---
 layout: page
 icon: fas fa-link
-order: 3
+order: 5
 ---
 
 <div class="friend-list">
