@@ -6,12 +6,12 @@
   tags: ["壁纸","封面"]
   # 存照片列表
   photos:
-- "https://cdn.jsdmirror.com/gh/2478800972/boke@main/assets/img/tw/wz/白百合.png"
-- "https://cdn.jsdmirror.com/gh/2478800972/boke@main/assets/img/tw/wz/蓝楹花.png"
-- "https://cdn.jsdmirror.com/gh/2478800972/boke@main/assets/img/tw/wz/落日余晖.png"
-- "https://cdn.jsdmirror.com/gh/2478800972/boke@main/assets/img/tw/wz/绣球花1.png"
-- "https://cdn.jsdmirror.com/gh/2478800972/boke@main/assets/img/tw/wz/绣球花2.png"
-- "https://cdn.jsdmirror.com/gh/2478800972/boke@main/assets/img/tw/wz/郁金香.png"
+    - "https://cdn.jsdmirror.com/gh/2478800972/boke@main/assets/img/tw/wz/白百合.png"
+    - "https://cdn.jsdmirror.com/gh/2478800972/boke@main/assets/img/tw/wz/蓝楹花.png"
+    - "https://cdn.jsdmirror.com/gh/2478800972/boke@main/assets/img/tw/wz/落日余晖.png"
+    - "https://cdn.jsdmirror.com/gh/2478800972/boke@main/assets/img/tw/wz/绣球花1.png"
+    - "https://cdn.jsdmirror.com/gh/2478800972/boke@main/assets/img/tw/wz/绣球花2.png"
+    - "https://cdn.jsdmirror.com/gh/2478800972/boke@main/assets/img/tw/wz/郁金香.png"
 
 - id: jiangnan
   title: "烟雨江南"
