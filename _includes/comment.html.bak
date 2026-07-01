@@ -83,12 +83,6 @@
   }
 
   /* ========== 暗色模式：右下角背景图 ========== */
-  
-  /* 如果不想要这个只想显示白天的背景把下面的代码删了就行了或者添加这个代码隐藏暗色背景图html[data-bs-theme="dark"] #waline .wl-panel::after {
-  display: none;
-} */
-
-
   html[data-bs-theme="dark"] #waline .wl-panel::after {
     background-image: url('https://cdn.jsdmirror.com/gh/2478800972/boke@main/assets/img/da.png');
     opacity: 0.7;
@@ -223,7 +217,7 @@
 
         path: window.location.pathname.replace(/^\/boke/, ''),
         dark: 'html[data-bs-theme="dark"]',
-        reaction: true, /* 开启评论表态心情反应，如果不想开false就行了 */
+        reaction: true, /* 开启评论表态心情反应 */
         lang: 'zh-CN',
         
 /* 保留原生默认表情 + QQ表情 + 贴吧表情，如果后面不要了把这段代码删了就行不要漏了逗号 */
