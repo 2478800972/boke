@@ -1,7 +1,7 @@
 - id: fm
   title: "推文封面"
   desc: "好看的封面"
-  cover: "/assets/img/tw/wz/白百合.png"
+  cover: "https://cdn.jsdmirror.com/gh/2478800972/boke@main/assets/img/tw/wz/白百合.png"
  # location: "吉林" 可选择取消#注释启用地点
   tags: ["壁纸","封面"]
   # 存照片列表
