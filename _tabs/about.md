@@ -60,7 +60,7 @@ permalink: /about/
     </h4>
     <ul style="list-style: none; padding-left: 0; margin: 0;">
       <li style="margin-bottom: 10px;">
-        <a href="https://2478800972.github.io/momo/下载/xz.html" target="_blank" style="text-decoration: none; color: var(--link-color); font-weight: 500; border-bottom: 1px solid transparent; transition: border-color 0.2s;">📱 阅读APP五版本下载</a>
+        <a href="https://2478800972.github.io/momo/下载/xz.html" target="_blank" style="text-decoration: none; color: var(--link-color); font-weight: 500; border-bottom: 1px solid transparent; transition: border-color 0.2s;">📱 阅读APP全版本下载</a>
       </li>
     </ul>
   </div>
