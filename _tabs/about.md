@@ -25,10 +25,13 @@ permalink: /about/
     </h4>
     <ul style="list-style: none; padding-left: 0; margin: 0;">
       <li style="margin-bottom: 10px;">
-        <a href="https://2478800972.github.io/momo/zhuti.html" target="_blank" style="text-decoration: none; color: var(--link-color); font-weight: 500; border-bottom: 1px solid transparent; transition: border-color 0.2s;">✨ 兮心阅读主题</a>
+        <a href="https://2478800972.github.io/momo/zhuti.html" target="_blank" style="text-decoration: none; color: var(--link-color); font-weight: 500; border-bottom: 1px solid transparent; transition: border-color 0.2s;">✨ 兮心阅读主题『GitHub』</a>
       </li>
       <li style="margin-bottom: 10px;">
-        <a href="https://2478800972.github.io/momo/" target="_blank" style="text-decoration: none; color: var(--link-color); font-weight: 500; border-bottom: 1px solid transparent; transition: border-color 0.2s;">🏠 兮心官网</a>
+        <a href="https://momoa.cc.cd/zhuti.html" target="_blank" style="text-decoration: none; color: var(--link-color); font-weight: 500; border-bottom: 1px solid transparent; transition: border-color 0.2s;">✨ 兮心阅读主题『域名』</a>
+      </li>
+      <li style="margin-bottom: 10px;">
+        <a href="https://momoa.cc.cd/" target="_blank" style="text-decoration: none; color: var(--link-color); font-weight: 500; border-bottom: 1px solid transparent; transition: border-color 0.2s;">🏠 兮心官网</a>
       </li>
       <li style="margin-bottom: 10px;">
         <a href="https://momo-b5a.pages.dev/画廊/hl" target="_blank" style="text-decoration: none; color: var(--link-color); font-weight: 500; border-bottom: 1px solid transparent; transition: border-color 0.2s;">🕊️ 画廊</a>
@@ -47,7 +50,7 @@ permalink: /about/
         <a href="https://flowus.cn/moshang/share/3d76e1ce-55ca-4cd4-ab99-8f8b486c56ae" target="_blank" style="text-decoration: none; color: var(--link-color); font-weight: 500; border-bottom: 1px solid transparent; transition: border-color 0.2s;">📘 阅读基础使用教程</a>
       </li>
       <li style="margin-bottom: 10px;">
-        <a href="https://2478800972.github.io/momo/发布/书源发布.html" target="_blank" style="text-decoration: none; color: var(--link-color); font-weight: 500; border-bottom: 1px solid transparent; transition: border-color 0.2s;">🔖 书源发布页</a>
+        <a href="https://momoa.cc.cd/发布/书源发布.html" target="_blank" style="text-decoration: none; color: var(--link-color); font-weight: 500; border-bottom: 1px solid transparent; transition: border-color 0.2s;">🔖 书源发布页</a>
       </li>
     </ul>
   </div>
@@ -60,7 +63,7 @@ permalink: /about/
     </h4>
     <ul style="list-style: none; padding-left: 0; margin: 0;">
       <li style="margin-bottom: 10px;">
-        <a href="https://2478800972.github.io/momo/下载/xz.html" target="_blank" style="text-decoration: none; color: var(--link-color); font-weight: 500; border-bottom: 1px solid transparent; transition: border-color 0.2s;">📱 阅读APP全版本下载</a>
+        <a href="https://momoa.cc.cd/下载/xz.html" target="_blank" style="text-decoration: none; color: var(--link-color); font-weight: 500; border-bottom: 1px solid transparent; transition: border-color 0.2s;">📱 阅读APP全版本下载</a>
       </li>
     </ul>
   </div>
