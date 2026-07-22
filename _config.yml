@@ -9,7 +9,7 @@ theme: jekyll-theme-chirpy
 lang: zh-CN
 
 # 改为你所在的时区 › 参考：https://zones.arilyn.cc
-timezone:
+timezone: Asia/Shanghai
 
 # jekyll-seo-tag 配置 › 参考：https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
@@ -89,6 +89,9 @@ pageviews:
 #     dark  — 使用深色主题
 #
 theme_mode: # [light | dark]
+
+# 新增这一行：彻底禁用谷歌字体 
+google_fonts: ""
 
 # 媒体资源的 CDN 节点
 # 注意：一旦赋值，所有以 '/' 开头的媒体资源（站点头像、文章图片、音视频文件等）
